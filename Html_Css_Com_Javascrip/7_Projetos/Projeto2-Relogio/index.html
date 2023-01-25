@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Relógio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            background-color: #333;
+            font-family: Arial, Helvetica, sans-serif;
+
+            min-height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .relogio{
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 200px;
+            width: 400px;
+            z-index: 999;
+            position: relative;
+            border: 5px solid #FFF;
+            height: 400px;
+        }
+        .riscos{  /* quadrado por cima do circulo */
+            width: 100%;
+            height: 100%;
+            padding-left: 50%;
+            padding-top: 50%;
+            z-index: 22;
+            margin-top: -1px;
+          /*   background-color: rgb(99, 82, 82); */
+           
+        }
+        .risco{  /* ponteiros de cada hora */
+            min-width: 195px;
+            /* background-color: aquamarine; ponteiros oculto  */ 
+            height: 5px;
+            transform-origin:  left ; /* deixa um abaixo do outro */
+            display: flex;
+            justify-content: flex-end;
+            color: #fff;
+            position: absolute;
+        }
+        .risco .ponto{ /* ponteiros de cada hora */
+            background-color: red; /* pega apenas a ponta dos ponteiros */
+            width: 15px;
+            height: 100%;
+        }
+        .ponteiros{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(5, 10, 14,0.5); 
+            padding-left: 50%;
+            padding-top: 50%;
+            border-radius: 50vw;
+            margin-top: -100%;
+        }
+        .p{
+            transform-origin: left;
+            background-color: rgb(28, 14, 107);
+            position: absolute; /*  oculta */
+            transform: rotate(0deg);
+            border-radius: 50%;
+        }
+        .p_s{
+            width: 120px;
+            height: 3px;
+            background-color: #FFF;
+        }
+        .p_m{
+            width: 140px;
+            height: 7px;
+            
+            background-color: red;
+        }
+        .p_h{
+            width: 100px;
+            height: 10px;
+            background-color: rgb(124, 3, 3);
+            /* background-color: rgb(151, 0, 106); */
+        }
+        .encaixe{
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: -17px;
+            margin-left: -17px;
+        }
+        .digital{
+            color: #FFF;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        footer{
+            margin-top: 20px;
+            color: #FFF;
+            font-size: 18px;
+            position: relative;
+         
+            bottom: -100px;
+        }
+    </style>
+</head>
+<body>
+     <h1>Relógio Analógico</h1>
+     <div class="relogio">
+        <div class="riscos">
+            <div class="risco" style="transform: rotate(0deg)"><div class="ponto">  </div></div>
+            <div class="risco" style="transform: rotate(30deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(60deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(90deg)"><div class="ponto">  </div></div>
+            <div class="risco" style="transform: rotate(120deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(150deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(180deg)"><div class="ponto"> </div></div>
+            <div class="risco" style="transform: rotate(210deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(240deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(270deg)"><div class="ponto"> </div></div>
+            <div class="risco" style="transform: rotate(300deg)"><div class="ponto"></div></div>
+            <div class="risco" style="transform: rotate(330deg)"><div class="ponto"></div></div>
+        </div>
+    
+        <div class="ponteiros">
+            <div class="p p_s"></div>
+            <div class="p p_m"></div>
+            <div class="p p_h"></div>
+            <div class="encaixe"></div>
+        </div>
+    </div>
+    <div class="digital">--:--:--</div>
+    <footer>Criado por Regis Souza</footer>
+    <script>
+        //===========================Relógio Analógico======================
+        let sElemento= document.querySelector('.p_s');
+        let mElemento= document.querySelector('.p_m');
+        let hElemento= document.querySelector('.p_h');
+
+        //===========================Relógio Digital=========================
+        let DigitalR= document.querySelector('.digital');
+     
+        function atualizaRelogio(){
+            let now= new Date();
+            let horas= now.getHours();
+            let minuto= now.getMinutes();
+            let segundo= now.getSeconds();
+            DigitalR.innerHTML=`${fixaZero(horas)}:${fixaZero(minuto)}:${fixaZero(segundo)}`;
+            // calculo das contas de s, m e h
+            CalculoS = ((360/60)*segundo) -90; // deve diminuir 90 graus pois, 0 segundos começa em 0 graus.
+            CalculoM = ((360/60)*minuto) -90;
+            CalculoH = ((360/12)*horas) -90;
+            sElemento.style.transform=`rotate(${CalculoS}deg)`;
+            mElemento.style.transform=`rotate(${CalculoM}deg)`;
+            hElemento.style.transform=`rotate(${CalculoH}deg)`;
+        }
+        function fixaZero(tempo){
+            return tempo < 10 ?`0${tempo}`: tempo;
+        }
+        setInterval(atualizaRelogio,1000); // execulta a função de um em um segundo
+        atualizaRelogio();//chama a fução antes de passar um segundo, logo o setInterval não ira possuir delay
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Oswald', sans-serif;*/
+}
+header .line{
+    height: 10px;
+    background-color: #117050;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.header--area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.header--left img{
+    width: 64px;
+    height: 64px;
+}
+.header--search form{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.header--search input{
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #9999;
+    outline: 0;/*efeito ao clicar*/
+    width: 100%;
+    max-width: 260px;
+    padding-right: 30px; 
+    /*Não deixa escrever por
+     baixo do icone*/
+    
+}
+.header--search button{
+    border: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: -30px;
+}
+.header--search button:focus {
+    outline: 2px solid #000;  
+}
+
+.header--search button img{
+      height: 16px;
+      width: 25px;
+      object-fit: contain;
+}
+.header--right{
+    display: flex;/*deixa a div do menu junto com input*/
+    align-items: center;
+}
+.header--menu {
+    margin-left: 50px;
+}
+.header--menu img{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+/*Parte do banner*/
+.banner{
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color:#FFF !important;
+    border-top:1px solid #CCC;
+    border-bottom:1px solid #CCC;
+    background-image: url('../images/bg.jpg');
+    background-position:center;
+    background-size: cover;
+}
+.banner h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 96px;
+    line-height:90px;
+    margin-bottom: 30px;
+}
+.banner--images{
+    margin-top: 60px;
+}
+.banner--images img{
+    width: 148px;
+    height: 148px;
+    border: 5px solid #117050;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+
+/*Sessão sobre Lady Gaga area 1*/
+.area1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.area1-content{
+    padding: 80px;
+}
+.area1-quote{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.area1-text{
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+.area1-content--img1{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 450px;
+    background-image: url('../images/f2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.area1-content--img2{
+    background-color: green;
+    grid-column: 2 / 3; /*Esta na coluna 2*/
+    grid-row: 1 / 3;/*esta usando duas linhas*/
+    background-image: url('../images/f1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/*Sessão sobre a area 2*/
+.area2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color:#e8e9ee !important;
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+}
+.area2-content{
+    padding: 80px;
+}
+
+.area2-text{
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+.area2-content--img1{
+    background-color: red;
+    height: 350px;
+    background-image: url('../images/f4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.area2--content--img2{
+    background-color: green;
+    grid-column: 1 / 2; /*Esta na coluna 2*/
+    grid-row: 1 / 3;/*esta usando duas linhas*/
+    background-image: url('../images/f3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*Sessão sobre a area 3*/
+.area3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.area3-content{
+    padding: 200px 80px;
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-position: left;
+}
+
+.area3-text{
+    margin-bottom: 30px;
+    line-height: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.area3-content--img{
+    background-image: url('../images/f5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.area3-content .button{
+    text-decoration: none;
+    border: 2px solid #454545;
+    display: inline-block;
+    padding: 10px 30px; /*
+    10 = (altura e base) e
+    30 = (largura da direita e esquerda)*/
+    border-radius: 3px;
+    color: #454545;
+}
+
+/*Sessão sobre a area 4*/
+.area4{
+
+    padding-top:80px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    background-color:#e8e9ee !important;
+    border-top:1px solid #bbb;
+    border-bottom:1px solid #bbb;
+}
+.area4-content{
+   padding: 150px 80px; 
+}
+@media (min-width:2500px) and (min-width:2556px) {
+    .area4{
+        display: grid;
+        grid-template-columns: 800px 1fr;
+    }
+    .area4-text{
+        line-height: 25px;
+        width: 100%;
+        max-width: 800px;
+        float: right;
+    }
+    .area4-content a{
+        margin-top: 50px;
+    }
+}
+.area4-text{
+    line-height: 25px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.area4-content a{
+    margin-top: 50px;
+}
+.area4-content--img{
+    background-image: url('../images/bg3.jpg');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+/*Tags globais. São utilizada varias vezes*/
+h2{
+    font-family: 'Oswald',sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 45px;
+    margin: 20px 0;
+}
+
+.bar{
+    width: 168px;
+    height: 22px;
+    background-color: #006341;
+}
+.button{
+    text-decoration: none;
+    border: 2px solid #454545;
+    display: inline-block;
+    padding: 10px 30px; /*
+    10 = (altura e base) e
+    30 = (largura da direita e esquerda)*/
+    border-radius: 3px;
+    color: #454545;
+}
+.button:hover{
+    color: #FFF;
+    background-color: #454545;
+}
+
+/*sessão da area 5*/
+.area5{
+    background-image: url('../images/bg4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    max-height:600px;
+}
+
+/*sessao do rodape*/
+footer{
+    background-color: #333!important;
+    border-top:1px solid #bbb;
+    padding: 20px;
+   
+    color: #fff;
+    display: grid;
+    gap: 20px;
+    align-items: center; 
+    justify-content:  center;
+}
+footer a{
+    color: #fff;
+}
+footer span{ 
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*Resposividade*/
+@media (min-width:769px) and (max-width:1140px){
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .area1{
+        grid-template-columns: 3fr 2fr; /*terá 1f a mais do  que a  de 2fr*/
+    }
+}
+
+@media (min-width:429px) and (max-width:768px){
+   
+    .banner h1 {
+        font-size: 80px;
+        line-height: 80px;
+    }
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .area1{
+        grid-template-columns: 3fr 2fr; 
+    }
+    .area1-content--img2{
+        background-position: right;
+  
+    }
+    .area2{
+        grid-template-columns: 2fr 3fr; 
+    }
+    .area4{grid-template-columns: 2fr 1.5fr; }
+    .area4-content{
+        width: 100vw;
+    }
+}
+
+@media (max-width:428px){
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .header--search input{
+        max-width: 150px;
+        margin: auto;
+    }
+    .header--menu{
+        margin-left: 15px;
+    }
+   .banner h1{
+        font-size: 50px;
+        line-height: 50px;
+    }
+    h2{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .banner--images img{
+        width: 90px;
+        height: 90px;
+        border: 3px solid #117050;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .area1, .area2, .area3, .area4{
+        grid-template-columns: 1fr;
+    }
+    .area1-content,
+    .area2-content, 
+    .area3-content,
+    .area4-content{
+        padding: 40px;
+    }
+    .area5{
+        min-height: 200px;
+    }
+    footer{
+        gap: 10px;
+        padding: 5px;
+    }
+}

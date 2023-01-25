@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+  /*  box-sizing: border-box;*/
+}
+body{
+    background-color: #d6d3d3;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header, .container{
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: black;  
+}
+
+.container{
+    height: auto;
+    margin: 0 auto;
+    background-color: blueviolet;  
+    margin-bottom: 3px;
+  
+}
+.menu{
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+ .menu ul{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: -6px;
+
+}
+.menu li{ 
+    margin: 10px;
+    list-style:  none;
+    padding: 10px;
+    border-right: 1px solid white;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.menu .tiraBorda{
+    border-right: none;
+}
+.menu a{ 
+    text-decoration: none;
+    font-size: 21px;
+    color: white;
+    margin-right: 10px;  
+}
+
+.menu a:hover { 
+    display: flex;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 21px;
+    background-color: rgb(129, 46, 206);
+}
+
+.Corpo{
+    border: 3px solid black;
+    margin: 0 auto;
+    margin-top: -2px;
+    max-width: 1100px;
+    padding-bottom: 40px;
+    background-color: rgb(129, 46, 206);
+}
+.container .Corpo{
+    padding-bottom: 40px;
+  
+}
+
+h1, h2{
+    text-align: center;
+    margin: 10px;
+    color: white;
+    text-shadow: 5px 5px 5px #0a0909;
+}
+h2{
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.DivdaFoto img {
+    display: flex;
+    padding: 1px;
+    background-color: #4130c0;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+.homenagem{
+    width: 80%;
+    font-size: 21px;
+    margin: auto;
+    text-align: justify;
+    margin-top: 20px; 
+    color: white;
+}
+/*Linha do Tempo*/
+.linhaDoTempo{
+    margin: 0 auto;
+    background-color: rgb(20, 85, 12);
+    padding: auto;
+    border: 3px solid black;
+}
+.CorpolinhaDoTempo{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 40px;
+    text-align: justify;
+  
+}
+.texto{
+    display: flex;
+    padding-right: 10px;
+    background-color: white;
+    align-items: center; 
+    border-radius:10px;
+    width: 410px;
+}
+.data{
+    display: flex;
+    border-radius:10px;
+    order: -1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-self:center; 
+    background-color: rgb(226, 134, 14);
+   
+}
+.colorSinopse{
+    background-color: #4130c0;
+    border: 3px solid black;
+}
+
+.Galeria{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+    flex-wrap:wrap;
+    background-color: black;
+}
+.Galeria .DivdaFoto img{
+    display: flex;
+    text-align: center;
+    justify-items: stretch;
+    background-color: #030303;
+    margin: 5px;
+    width: 340px;
+    height: 300px;
+    object-fit: cover;
+}
+ .linhaDaInfor{
+    padding: 8px auto;
+    max-width: 100%;
+ }
+ .linhaDaInfor .Corpo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    color: white;
+    background-color: rgba(65, 65, 255, 0.925);
+    font-size: 21px;    
+}
+.linhaDaInfor a{
+    color: rgb(255, 20, 20);
+    margin-left: 5px;
+}
+.Corpo_Site{
+    margin: 0;
+    
+}
+footer{
+    background: #030303;
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+.InfDosIcones{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 10px;
+   
+}
+.icones{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.Footer_CopyRight{
+    display: flex;
+    justify-content: center;
+}
+/*Resposividade*/
+
+@media (max-width:1125px) {
+    .Corpo, .linhaDoTempo{
+        max-width: 800px;
+    }
+
+    .DivdaFoto img {
+        display: flex;
+        justify-content: space-between;
+        background-color: #555555;
+        margin: 0 auto;
+        
+        max-width: 80%;
+        max-height: 80%;
+        border: 5px solid white;
+        border-radius: 5px;
+    }
+
+
+}
+
+@media (max-width:810px) {
+
+    .Corpo, .linhaDoTempo{
+        max-width: 500px;
+    }
+
+    .Galeria .DivdaFoto img{
+        display: flex;
+        text-align: center;
+        justify-items: stretch;
+        background-color: #030303;
+        margin: 5px;
+        margin-left: 5px;
+        max-width: 200px;
+        max-height: 150px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width:510px) {
+    .container, .Corpo{
+        max-width: 100%;
+    }
+    .menu{
+        font-size: 16px;
+        background-color: black;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        max-width: 100vw;
+    }
+    .menu a{ 
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        margin-right: 10px;  
+    }
+    h1, h2{
+        font-size: 18px;
+    }
+    .homenagem, .Sinopse{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .DivdaFoto img {
+        display: flex;
+        background-color: #555555;
+        margin: 0 auto;
+        max-width: 50%;
+        max-height: 60%;
+        background-size: auto;
+        border: 5px solid white;
+        border-radius: 5px;
+    }
+    .CorpolinhaDoTempo{
+        font-size: 16px;
+
+    }
+    .Corpo, .linhaDoTempo{
+        max-width: 400px;
+    }
+
+}

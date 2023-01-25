@@ -1,0 +1,614 @@
+*{
+    font-family: arial;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*************Menu*************/
+header{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    
+}
+.Logo{
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    align-items: center;
+
+}
+nav ul, nav li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    display: flex;  /*coloca toda lista em linha*/
+}
+nav a{
+    display: block; /*usado para altera o tamanho, area*/
+    padding: 15px;
+    text-decoration: none;
+    color: #727272;
+    font-family: arial;
+   
+}
+nav .active a ,nav a:hover{
+    background-color: #39AAE1;
+    color: white;
+    transform:rotate(-3deg);
+    box-shadow: 10px 10px 10px rgb(125, 121, 121);
+}
+/*************Banner*************/
+#banner{
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/img1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 670px; /*sem este comando a imagem não aparece*/
+}
+.DeixarDivEmcoluna{
+    flex-direction: column;
+}
+.banner_RedLine{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    max-width: 350px; /*caso seje maior que 350px não se mantera fixo*/
+}
+.banner_RedLine h1 {
+    font-size: 68px;
+    text-shadow: 1px 1px 1px #555555;
+    margin: 0;
+    padding: 0;
+}
+.banner_RedLine h2{
+    font-size: 21px;
+    text-shadow: 1px 1px 1px #555555;    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.Banner_option{
+    height: 240px;
+    display: flex;
+}
+.banner1, .banner2, .banner3{
+    flex: 1;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    margin-block-end: 10px;
+}
+.banner1{
+    background-color: #39aae1;
+}
+.banner2{
+    background-color: #0079c7;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.banner3{
+    background-color: #2b4c99;
+}
+.Banner_Titulo{
+    font-size: 21px;
+}
+.Banner_descricao{
+    margin-top:20px;
+    font-size: 15px;
+}
+.Banner_option a{
+    border: 1px solid white;
+    display: inline-block; /*precisa deste comando para que o margin funcione*/
+    padding: 5px;
+    margin-top: 20px;
+    width: 80px;
+    color: white;
+    text-decoration: none;
+}
+.dia{
+    margin-top: -20px;
+    padding-top: 15px;
+    display: flex;
+    border-bottom: 1px solid #39aee1;
+    justify-content: space-between;
+}
+/*************ConteudoGeral*************/
+#geral{
+    display: flex;
+    justify-content: center;
+}
+#geral section{
+    flex: 2;  
+}
+#geral aside{
+    flex:1;   
+}
+.widget{ margin-bottom: 20px;}
+.widget_Titulo{ /*comando que sera em outros titulos do geral*/
+    margin-top: 30px;
+    margin-bottom: 20px;   
+}
+.widget_Titulo_Texto{
+    color: #2b4c99;
+    font-size: 20px;
+    font-weight: bold;
+}
+.widget_Div_Barra{
+    height: 3px;
+    width: 50px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.widget_Corpo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+/*************ConteudoGeralDireita*************/
+.quadrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 140px;
+    height: 140px;
+    padding: 10px;
+    color: white;
+    background-color: #2b4c99;
+    border-radius: 10px;
+}
+
+.quadrado:hover{
+    background-color: #36a9e1;
+    color: #2b4c99;
+}
+
+.widget_Contato {
+    display: flex;    
+    flex-direction: row;
+    border-top: 1px solid #ccc; 
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+
+}
+
+.widget_Contato .AjeitarImagem{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #555555;
+}
+
+.widget_Contato  .AjeitarTexto{
+    display: flex;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.widget_Contato  .formulario {
+    display: inline-block;
+    margin-top: 8px;
+    text-align: justify;
+ }
+ .widget_Contato  .formulario a{
+    text-decoration: none;
+    color: red;
+ }
+ .widget_Contato  .formulario a:hover {
+    color: #2b4c99;
+ }
+
+/*************ConteudoGeralEsquerda*************/
+article{
+    flex: 1; /*padroniza todos para um mesmo tamanho*/
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+article a{
+    text-decoration: none;
+}
+article .Corpo_balao{
+    display: flex;
+    color:white;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Comando de alguma pessoa que fez a setinha aparecer*/
+article .Corpo_data::after{  
+    content:'';
+    color: white;
+    position:absolute;
+    display:block;
+    margin-top: -10px;
+    border:14px solid black;
+    border-color:transparent transparent transparent #2b4c99;
+    margin-right:0px;
+    margin-left:-10px;
+}
+article .Corpo_data{
+    font-size: 16px;
+    margin-bottom: 30px;
+    background-color: #2b4c99;
+    padding: 10px;
+    margin-right: 2px;
+
+}
+article .Corpo_Num{
+    margin-bottom: 30px;
+    background-color: #36a9e1;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+article .thumbnail img{
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    font-size: 20px;
+    margin-top: -5px;
+}
+.news_resumo{
+    text-align: justify;
+    font-size: 16px;
+    line-height: 20px;
+    color: #565656;
+    margin-bottom: 20px;
+}
+/*************Rodape*************/
+footer{
+    background-color: #1c1c1c;
+    display: flex;
+    color: white;
+    justify-content: center;/*Deixa o conteudo centralizado*/
+}
+.footer_menu{
+    display: flex;
+    flex: 1;
+}
+
+.Fm_1, .Fm_2, .Fm_3{
+ flex:1;
+ font-size: 14px;
+ margin-block-start: 10px;
+ padding: 20px;
+ border-radius: 10px;
+}
+.Fm_1{background-color: #36a9e1;} 
+.Fm_2{
+    background-color: #0079c7;
+    margin-left: 20px;
+    margin-right: 20px;
+} 
+.Fm_3{background-color: #2b4c99;}
+
+.footer_menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    
+}
+.flex_Para_Coluna_Abaixo_Area{
+    flex-direction: column;
+    display: flex;
+}
+.footer_Area{
+    display: flex;
+}
+.footer_AreaItem1,
+.footer_AreaItem2,
+.footer_AreaItem3{
+    flex: 1;
+    padding-left: 20px;
+    margin-left: 0;
+    border-radius: 10px;
+    margin-block-start: 10px;
+    margin-block-end: 20px;
+    font-size: 12px;
+}
+
+.footer_AreaItem2{
+    margin-left: 20px;
+    margin-right: 20px;
+   
+}
+footer .widget_Titulo_Texto{
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+
+}
+.footer_Area .footer_AreaItem1,
+.footer_Area .footer_AreaItem2,
+.footer_Area .footer_AreaItem3{
+    padding: 0;
+}
+.footer_Area .widget_Corpo{
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+footer .Footer_CopyRight{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #8c8c8c;
+    border-top: 1px solid #2c2c2c;
+}
+
+/*Rodape Final  1ª coluna*/
+.Texto{
+    margin-bottom: 30px;
+}
+.Widget_Endereco, br{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+}
+.Widget_Endereco .Rua{
+    margin-right: 5px;
+    justify-content: flex-start;
+   
+}
+.celular_email{
+    justify-content: flex-end;
+    width: 45%;
+}
+.AnoPostagem{
+    color: #36a9e1;
+}
+
+.Widget_Endereco a{
+    text-decoration: none;
+    color: white;
+}
+.TamanhoIconeRodape{
+    display: flex;
+    flex-direction: row;
+}
+.Texto .TamanhoIconeRodape img{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+    color: white;
+    width: 35px;
+    height: 35px;
+    
+}
+/*Rodape Final 2ª coluna*/
+.flex_2ColunaRodape{
+    flex-direction: column;
+}
+.deixa_Seta_Texto_Horizontal{
+    display: flex;
+}
+.seta{ 
+    margin-right: 10px;
+    color: white;
+}
+.Texto2{ 
+    line-height: 20px;
+    color: white; 
+    text-align: justify;
+}
+.AnoPostagem{
+    margin-top: 5px;
+}
+
+.footer_AreaItem3 .Texto2{
+    color: #8c8c8c;
+}
+.Texto2 a{
+    text-decoration: none;
+    color: white;
+}
+.MenuMobile{
+    display: none;
+    border-radius: 25px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px ;
+    margin-bottom: 20px;
+    background-color: #0079c7;
+}
+.LinhaMobile{
+    height: 2px;
+    width: 20px;
+    background-color: white;
+}
+/*******Responsividade*******/
+/*                          */
+/****************************/
+
+/*Tablet Maior*/
+@media (max-width:978px){
+  
+    header{
+        font-size: 18px;
+    }
+    .Logo{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+      
+    }
+    .banner_RedLine {
+        padding: 20px;
+    }
+    .banner_RedLine h1 {
+        font-size: 54px;
+    }
+    .banner_RedLine h2 {
+        font-size: 17px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .Banner_descricao {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    #geral section, #geral aside {
+        padding: 20px;
+    }
+    .Fm_2 {
+        background-color: #0079c7;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .Fm_3 {
+    font-size: 15px;
+    }
+    
+}
+
+
+/***Tablet Menor**/
+@media (max-width:773px){
+    .container {
+        flex-direction: column;  
+    }
+    nav ul {
+        flex-direction: column;
+        display:none; /*Desativa o menu*/
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+    }
+    .MenuMobile{
+        display: flex;/*Aparece o simbolo do menu*/
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    
+    .banner_RedLine {
+        padding: 20px;
+    }
+    .banner_RedLine h1 {
+        font-size: 42px;
+    }
+    .banner_RedLine h2 {
+        font-size: 15px;
+    }
+    .Banner_descricao {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+    .Banner_option {
+        height: auto;
+        flex-direction: column;
+    }
+    .banner2 {
+        background-color: #0079c7;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .Banner_descricao {
+    margin-top: 8px;
+    font-size: 12px;
+    }
+    .Banner_option .banner1, 
+    .Banner_option .banner2 , 
+    .Banner_option .banner3 {
+        background-color: #0079c7;
+        margin-block-start: -5px;
+    }
+    #geral section, #geral aside {
+        padding: 20px;
+    }
+    .footer_menu{
+        flex-direction: column;
+    }
+   
+    .footer_Area{
+        flex-direction: column;
+        padding: 20px
+    }
+    .footer_AreaItem2 {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    header .container{
+        flex-direction: row;
+    }
+    header{
+        height: auto;
+    }
+    .Logo{ 
+        display: flex;
+        padding-left:20px;
+        align-items: center;
+    }
+    .Widget_Endereco, br{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        line-height: 20px;
+    }
+    .Widget_Endereco .Rua{
+        margin-right: 2px;
+        justify-content: flex-start;
+       
+    }
+    .Fm_2 {
+        background-color: #0079c7;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+ 
+}
+
+/***Para celular***/
+@media(max-width:450px){
+    #geral section, #geral aside {
+        padding: 20px;
+    }
+
+    .banner_RedLine h1 {
+        font-size: 20px;
+    }
+    
+    .banner_RedLine h2 {
+        font-size: 15px;
+    }
+
+    .Banner_option .banner1, 
+    .Banner_option .banner2 , 
+    .Banner_option .banner3 {
+       
+        margin-block-start: -1px;
+    }
+    header .container{
+        flex-direction: row;
+    }
+}

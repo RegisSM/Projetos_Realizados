@@ -1,0 +1,9 @@
+let pizzaJson = [
+    {id:1, name:'Mussarela', img:'images/pizza.png', price:[20.19, 20.00, 29.00], sizes:['100g', '530g', '860g'], description:'Esta pizza é coberta com molho de tomate, queijo tipo mussarela, azeitonas pretas e orégano e massa com fermentação natural, oferece mais sabor e qualidade à sua mesa.'},
+    {id:2, name:'Calabresa', img:'images/pizza2.png', price:[18.00, 17.00, 26.00], sizes:['320g', '510g', '830g'], description:'Uma deliciosa combinação de Linguiça Calabresa, rodelas de cebolas frescas, azeitonas pretas, mussarela, polpa de tomate, orégano e massa especial garante um sabor único à Pizza de Calabresa.'},
+    {id:3, name:'Quatro Queijos', img:'images/pizza3.png', price:[17.45, 21.00, 28.45], sizes:['310g', '530g', '880g'], description:'É uma variedade de pizza na culinária italiana que é coberta com uma combinação de quatro tipos de queijo, geralmente derretidos juntos, com ou sem molho de tomate. É popular no mundo todo.'},
+    {id:4, name:'Americana', img:'images/pizza4.png', price:[19.77, 22.00, 27.77], sizes:['300g', '500g', '860g'], description:'Esta pizza contem: queijo mussarela , calabresa , cogumelos, azeitonas, cebola, pimentão, salsicha, carne moída, bacon, frango, presunto, abacaxi, salame, espinafre, tomate e anchova.'},
+    {id:5, name:'Sorvete', img:'images/pizza5.png', price:[21.43, 22.00, 27.43], sizes:['320g', '570g', '860g'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
+    {id:6, name:'Moda da Casa', img:'images/pizza6.png', price:[18.55, 20.00, 26.55], sizes:['320g', '540g', '860g'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'},
+    {id:7, name:'Chocolate', img:'images/pizza7.png', price:[22.36, 23.00, 30.36], sizes:['320g', '560g', '860g'], description:'Descrição da pizza em mais de uma linha muito legal bem interessante'}
+];

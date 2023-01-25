@@ -1,0 +1,408 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Geral{
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
+body{
+    background-color: #202124; 
+}
+
+nav{display: flex;}
+.Menu{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: white;
+ 
+}
+.TextLeft{
+    flex: 1;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    
+}
+.Textrigth{
+    flex: 1;
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+.TextLeft ul, .Textrigth ul{
+    display: flex;
+    list-style: none;  
+    align-items:center;
+}  
+
+.TextLeft ul li, .Textrigth ul li{
+    padding: 10px;
+    display: flex;
+   
+
+}
+
+.Textrigth ul li a{
+    text-decoration: none;
+    color: white;
+}
+ ul li a:hover{
+    text-decoration:underline;
+    color: white;
+}
+.iconeMenu img{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    padding: 8px;
+   
+}
+header{
+    width: calc( 100% - 10px);
+}
+.iconeMenu:hover{
+    border-radius: 30px;
+}
+input{width: calc( 100% - 10px);}
+.iconePerfil img{   
+    display: flex; 
+    padding: 3px;
+    width: 40px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.iconePerfil:hover{
+    border-radius: 30px;
+}
+
+.divLogo img{
+    max-width:150px;
+    object-fit: cover;
+
+}
+.img,input:hover, 
+.OrganizaEspacamento:hover {
+    border: 2px solid #303134;
+    background-color: #303134;
+}
+.OrganizaEspacamento{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 30px;
+    border: 2px solid #303134;
+    background-color: #202124;
+    border-radius: 30px;
+}
+
+.Lupa{
+    display: flex;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.Lupa .key{
+    flex:1;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+}
+.Lupa .Mic{
+    flex:1;
+    height: 50px;
+    margin-top:-3px ;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+}
+.Lupa img{
+    flex:1;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    object-fit: contain;
+    height:auto;
+    margin: 0;
+}
+.OrganizaEspacamento input{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    width: 450px;
+    color: white;
+    border: 0;   
+    font-size: 23px;
+    background-color: transparent; /*pega cor da div*/
+}
+
+.OrganizaEspacamento input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+ }
+ .Icone {
+    display: flex;
+    height: 15px;
+    margin-right: 10px;
+    color: #b8b8b8;
+    margin-bottom: 15px;
+}
+.Icone img {
+    margin-right: 10px;
+}
+
+#BarNav .TextLeft{
+    display: flex;
+  
+    align-items: center;
+    margin-bottom: -10px;
+}
+
+.traco{
+
+    width: 80px;
+    height: 2px;
+    background-color:#347ff8;
+}
+
+header{
+    min-width: 100%;
+    border-bottom: 1px solid #303134;
+}
+
+.TextLeft a{
+    text-decoration:dashed;
+
+}
+.TextLeft a:hover{
+    text-decoration:dashed;
+}
+
+#search{
+    max-width: 700px;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
+.Number-search{margin-bottom: 10px;}
+.Result-search{
+   
+    padding: 12px;
+  max-width: 100%;
+    color: #b8b8b8;
+    line-height: 20px;
+}
+.Result-search{
+    display: flex; 
+    flex-direction: column;
+
+}
+a{
+    display: block;
+    text-decoration:dashed; 
+    color: #b8b8b8;
+}
+a h1:hover,
+.afiliacao a:hover{
+    text-decoration: underline;
+}
+a h1 { 
+    color: #74a7fa;
+    font-weight: normal;
+    padding:10px 10px 10px 0px;
+}
+.afiliacao{
+    display: flex;
+   
+}
+.afiliacao a{
+    color: #74a7fa;
+   
+    padding-right: 5px;
+
+}
+
+.PesquisaRelacionada{
+    display: flex;
+    
+    align-items: flex-start;
+}
+
+.balaoRelacionado{
+    margin-right: 25px;
+    flex: 1;
+    flex-direction: column;
+}
+#search .OrganizaEspacamento {
+    max-width: 100%;
+    justify-content: flex-start;
+    display: flex;
+    padding-right: 25px;
+    align-items: center;
+    background-color: #303134;
+}
+#search .Lupa{
+    padding: 10px;
+    object-fit: cover;
+    
+}
+#search img {
+  width: 30px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+
+/*NumeroDePagina*/
+#CentralizaGoogle {
+    display: flex;
+    justify-content: center;
+    text-decoration: dotted;
+    max-width: 80%;
+}
+
+.estilo{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 35px;
+    color: white;
+}
+.number{
+    text-align: center;
+    font-size: 18px;
+    color: #8AB4F8;
+    margin-top: 5px;
+}
+
+#CentralizaGoogle a .number:hover{
+    text-decoration: underline;
+}
+.color{
+    font-size: 35px;
+    text-align: center;
+    color: #8AB4F8;
+  
+}
+
+/*Radape*/
+footer{
+    background-color: #171717;
+    max-width: 100%;
+}
+.RodapeCorpo{
+    display: flex;
+    margin-left: 60px;
+    margin-right: 30px;
+    color: #9AA0A6;
+
+    padding: 14px;
+}
+
+.comportamentoDiv{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 14px;
+    color: #9AA0A6;
+    background-color: #171717;
+}
+.RodapeAjuda1{
+    flex: 1;
+    flex-basis: 60%; 
+}
+
+.borda{
+    width: 100%;
+    border-bottom: 1px solid #303134;
+}
+.RodapeAjuda1 ul{
+    display: flex;
+    list-style: none;  
+  
+    align-items:center;
+    justify-content: flex-start;
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
+.RodapeAjuda1 ul li, .RodapeAjuda3 ul li{
+    display: flex;
+    align-items:center;
+    padding-right: 20px;
+    justify-content: center;
+}
+.mobile{display: none;}
+/*Responsividade*/
+@media(max-width:992px){
+    .ocultaVideo{
+        display: none;
+    }
+
+    .divLogo img{
+        max-width:90px;
+        object-fit: cover;
+    }
+    .mobile{display: flex;}
+    .Textrigth{
+        display: none;
+    }
+   
+    .OrganizaEspacamento input{width: 100px;}
+    .comportamentoDiv{
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
+@media(max-width:489px){
+    #Geral .TextLeft ul{
+        flex-direction: column;
+    }
+    .divLogo img{
+        max-width:80px;
+        object-fit: cover;
+    }
+    .PesquisaRelacionada{
+        display: flex;
+        max-width: 700px;
+        flex-direction: column;
+    }
+
+   .ocultaImage{
+    display: none;
+    }
+   header{
+    width: calc(100% - 20px);
+   }
+ 
+
+    .comportamentoDiv{
+        width: 100%;
+      
+        flex-direction: column;
+    }
+     .RodapeAjuda1{
+        flex: 1;
+      
+        display: flex;
+        margin-left: -50px;
+       
+   
+    }
+    #search {
+        font-size: 12px;
+            max-width: 280px;
+        }
+
+}
+
+
+

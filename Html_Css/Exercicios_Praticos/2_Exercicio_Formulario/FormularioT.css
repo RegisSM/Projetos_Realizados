@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+    box-sizing: border-box;
+}
+body{
+    margin-top: -20px;
+}
+legend{
+    margin-left: 25px;
+    color: white;
+    font-size: 25px;
+}
+fieldset{
+    border: 3px solid white;
+    border-radius: 10px;
+    max-width: 80%;
+
+}
+.container{
+    
+    height: 102.1vh;
+    background-color: aqua;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to top,rgb(126, 3, 3), rgb(54, 54, 221));
+    background:linear-gradient(to bottom,rgb(243, 212, 212), rgb(243, 212, 212),);
+    background:linear-gradient(to left,rgb(177, 52, 52), rgb(58, 58, 194));
+    background:linear-gradient(to right, rgb(97, 28, 28), rgb(49, 49, 100));
+    /* background-image: linear-gradient(-20deg, azure, rgb(0, 11, 168), rgb(218, 249, 42), rgb(152, 249, 42), rgb(201, 42, 249)); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+h1{
+    font-size: 27px;
+}
+
+.Titulo {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 100%;
+    padding: 20px;
+    justify-content: center;
+    color: rgb(34, 233, 77);
+    border: 5px solid white;
+    border-radius: 20px;
+  
+}
+fieldset .corpo{   
+    font-size: 18px;
+    display: flex; 
+    justify-content: space-between;
+    padding: 20px;
+    color: white; 
+
+ 
+}
+.CorpoLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    flex-wrap: wrap;
+}
+.CorpoLeft input{
+    margin-bottom: 10px;
+}
+.CorpoLeft label{
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+.CorpoRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    flex-wrap: wrap;
+   
+}
+.CorpoRight input{
+    margin-bottom: 2px;
+}
+
+.CorpoRight label{
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+.borda{
+    margin-bottom: 10px;
+}
+.borda legend{
+    margin-left: -5px;
+}
+
+.Tabelinha {
+    color: white;
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+.desfaz{
+    display: flex;
+    flex-direction: row;
+}
+
+input, select{ 
+    background-color: rgb(204, 221, 221);
+    padding: 5px;
+    border-radius: 20px;
+    max-width: 100%;
+}
+ .botao input{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: blueviolet;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.botao input:hover{
+    background-color:blue ;
+
+}
+.oculto{
+    display: none;
+}
+/*Responcividade*/
+@media(max-width:731px){
+    header{
+        max-width: 800px;
+    }
+    .container{
+        width:800px;
+    }
+    .CorpoRight{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+       
+    }
+    .Tabelinha{
+        max-width: 50%;
+        display: flex;
+       align-items: center;
+    }
+    .CorpoLeft{
+
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+       
+    }
+    .desfaz .desfaz{
+        display: flex;
+        flex-direction: column;
+    }
+    .botao{
+        margin-bottom: -10px;
+        max-width: 80%;
+        text-align: center;
+    }
+    .botao input{
+        display: flex;
+        font-size: 14px;
+        color: white;
+        flex-direction: column;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: blueviolet;
+        margin-right: 5px;
+        border-radius: 10px;
+    }
+    input, select{ 
+        display: flex;
+    }
+}
+@media(max-width:667px){
+    header{
+        max-width: 800px;
+    }
+    .borda legend{
+        font-size: 12px;
+    }
+    .container{
+        width:800px;
+        flex-direction: column;
+    }
+    h1{ font-size: 18px;}
+    label ,.botao{
+        font-size: 12px;
+    }
+    .CorpoRight{
+        margin-top: -100px;
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+    }
+    .CorpoLeft{
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        padding-right: 20px;
+    }
+    input, select{ 
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .botao{
+        margin-bottom: -10px;
+        max-width: 90%;
+        text-align: center;
+    }
+}
+@media(max-width:460px){
+    header{
+        max-width: 800px;
+    }
+    .container{
+        width:800px;
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+    }
+    h1{ font-size: 18px;}
+  
+
+    .CorpoRight{
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+       
+        flex: 1;
+    }
+    .CorpoLeft{
+        display: flex;
+        flex-direction: column;
+        
+        padding-right: 10px;
+        flex: 1;
+ 
+    }
+    input, select{ 
+        font-size: 12px;
+    }
+    .botao{
+        margin-bottom: -10px;
+        max-width: 100%;
+        text-align: center;
+        display: flex;
+    }
+}
+
+@media(max-width:423px){
+    body{
+        height: 140vh;
+    }
+    fieldset .corpo{   
+        display: flex; 
+        flex-direction: column;
+        align-self: flex-start;
+        order: 0;
+    }
+    .CorpoRight{
+        display: flex;
+        order: 0;
+        margin-top: -5px;
+        padding-left: 0;        
+        flex-direction: column;
+
+    }
+    .botao{
+        display: flex;
+        align-self: flex-start;
+        order: 2;
+    }
+
+}

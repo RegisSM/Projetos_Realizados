@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto:wght@100&family=Sedgwick+Ave&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://github.com/necolas/normalize.css.git">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+        </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            document.querySelector(".MenuMobile").addEventListener("click",function(){
+                if (document.querySelector("nav ul").style.display=='flex'){
+                    document.querySelector("nav ul").style.display='none';
+                } else{
+                    document.querySelector(".menu nav ul").style.display='flex';
+                }
+            });
+
+        };
+        window.addEventListener('resize', function () {
+            var largura = window.innerWidth;
+
+            if (largura > 600){
+                document.querySelector(".menu nav ul").removeAttribute('style');
+            };
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="Logo"> 
+                <img src="img/logotipo.png" alt=""/>  
+            </div>
+            <div class="Logo"> 
+                <h1>Hour Infinity</h1> 
+            </div>
+            <div class="menu">
+                <nav>
+                    <div class="MenuMobile">
+                        <div class="LinhaMobile"></div>
+                        <div class="LinhaMobile"></div>
+                        <div class="LinhaMobile"></div>
+                    </div>
+                    <ul>
+                        <a href="#home"> <li class="active">Home</li> </a>
+                        <a href="#MenuSobre"> <li>Sobre</li> </a>  
+                        <a href="#MenuRecursos"> <li>Recursos</li> </a>  
+                        <a href="#MenuProdutos"> <li>Produtos</li> </a>   
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="CorpoDiv">
+            <div class="TextLeft"> 
+                <p></p>
+                <h1>O melhor relógio feito para você. </br>
+                    Libere os ponteiros do seu relógio, e reconstrua o tempo ao seu favor.
+                </h1>
+                <p></p>
+                <h2>
+                    Aqui você encontra relógios de qualidade e preço surpreendentes. 
+                    Também oferecemos frete grátis para todo o Brasil, e 90 dias de garantia.
+                </h2>
+                <p></p>
+                <div class="botao">
+                   <a href="#MenuSaiba"><input type="submit" value="Saiba Mais" name="Botao">
+                   </a> 
+                </div>
+            </div>
+            <div class="TexttoRight">
+                <div class="divAnimada">
+                    <img src="img/0cbd508cdc.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <p id="MenuSaiba"></p>
+    <p></p>
+    <section id="Sobre"> 
+        <div class="CorpoDiv flex">
+            <div class="Descricao Logo container">
+                A <h1>Hour Infinity</h1> oferece a melhor combinação de estilos e produtos.
+            </div>   
+        </div>
+       
+        <p></p>
+       
+        <div class="CorpoDiv flex">
+            <div class="Descricao">          
+                O Apple Watch oferece os seguite benefícios 
+                recebimento de mensagens, rastreamento de 
+                atividades físicas e seleção de aplicativos do
+                que qualquer smartwatch de qualquer outra 
+                plataforma.   
+            </div>
+        
+            <p></p>
+            <div class="CorpoDiv"> 
+                <div class="TextLeft"> 
+                    <div class="divAnimada">
+                        <img src="https://llounge.in/wp-content/uploads/2021/03/38-alu-silver-sport-white-nc-s3-1up.png" alt=""/>
+                    </div>
+                 </div>
+
+                <div class="TexttoRight">
+                    <div class="quadro">
+                        <img src="img/coding.png" alt=""/>
+                        <h3> Desing de alta qualidade</h3>  
+                    </div>
+                    <div class="quadro">
+                        <img src="img/processadores.png" alt=""/>
+                        <h3>Processador super rápido</h3> 
+                    </div>
+                    <div class="quadro">
+                        <img src="img/technology.png" alt=""/>
+                        <h3>Tecnologia Letest</h3> 
+                    </div>
+                    <div class="quadro">
+                        <img src="img/dashboard.png" alt=""/>
+                       <h3>Interface amigável</h3> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p id="MenuSobre"></p>
+        <p></p>
+        <section id="ContSobre"> 
+            
+            <div class="textDescrip flex"> 
+                <h1> Sobre O Produto</br> </h1>
+                <p></p>
+                <h2>
+                    Preparado está me marianne prazer também debatendo. 
+                    Imagine uma escada incapaz, exceto melhor, que você admira. Seu seguro chamado estima elogio.
+                </h2>
+            </div>
+    
+            <div class="CorpoDiv">
+                <div class="TexttoRight ">
+                    <div class="SegundadivAnimada">
+                        <img src="img/38-alu-silver-sport-white-nc-s3-1up.png" alt=""/>
+                    </div>
+                </div>
+
+                <div class="TextLeft">
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/iconeDescricao/notificacao.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Rastreamento do Sistema GPS</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/iconeDescricao/nuvem.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Sincronização de dados Wi-Fi</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/iconeDescricao/pressao-arterial.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Gestão da Pressão Arterial</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/iconeDescricao/dois-baloes-de-fala.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Atualização do tempo</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>  
+    <p id="MenuRecursos"></p>
+    <p></p>
+    <section id="Recursos"> 
+        <div class="container"> 
+            <div class="textDescrip"> 
+                <h1> Recursos Implementados</br> </h1>
+                <p></p>
+                <h2>
+                    Preparado está me marianne prazer também debatendo. 
+                    Imagine uma escada incapaz, exceto melhor, que você admira. Seu seguro chamado estima elogio.
+                </h2>
+            </div>
+            <p></p>
+            <p></p>
+            <div class="CorpoDiv flexReverse">
+                <div class="TextLeft">
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/recurso/frequencia-cardiaca.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Monitor cardíaco</h2> 
+                            Novo tinha acontecido incapaz inquieto.
+                          Desenhos pronunciados podem ser seguidos 
+                          melhorados.
+                        </div>
+                    </div>
+
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/recurso/alarme.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Alerta de Alarme</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/recurso/cronometro.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Contador de Distância</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="TextCenter"> 
+                    <div class="divAnimada">
+                        <img src="https://www.shopclic.com.br/public/imagens/produtos/469f3ffd7ad6ebd1b8340f0f3fa20a96.png" alt=""/>
+                    </div>
+                </div>
+
+
+                <div class="TexttoRight">
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/recurso/bluetooth.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Bluetooth</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/recurso/atualizar-a-pagina.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Atualização do tempo</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+                    
+                    <p></p>
+                    <div class="imgComDescricao flexReverse"> 
+                        <div class="IconeImg">
+                            <img src="img/recurso/chamada-de-video.png" alt=""/>
+                        </div> 
+                        <div class="Texto"> 
+                            <h2>Video chamada</h2> 
+                            Pois o resultado e o talento somam
+                            vale paroquial. Músicas em outro estilo
+                            de mulher evite horas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p id="MenuProdutos"></p>
+    <p></p>
+    <section id="Produtos">
+        <div class="container flex">
+            <div class="textDescrip">
+                <h1> Nossos Produtos Incríveis</h1>
+                <h2> Preparado está me marianne prazer também debatendo. 
+                Imagine uma escada incapaz, exceto melhor, que você
+                admira. Seu seguro chamado estima elogio.</h2> 
+            </div>
+            <div class="CorpoDiv"> 
+                <div class="ComprarProd flexReverse">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_633981-MLA47789818136_102021-O.jpg" alt=""/>
+                    
+                    <h3> Apple Wach Branco</h3>
+                    
+                    <img class="estrela" src="img/iconeDescricao/estrela.png" alt=""/>
+                    
+                    <div class="preco">
+                        <div class="valorReal"> R$2.499,00</div> 
+                        <div class="valorDesconto">R$1.979,00</div> 
+                    </div>
+                     
+                    <div class="botao">
+                        <input type="submit" value="Compre Agora" name="Botao"/> </h2>
+                    </div>
+            
+                </div>
+
+                <div class="ComprarProd">
+                    <img src="https://m.media-amazon.com/images/I/41VloTUvoBL._AC_SY450_.jpg" alt=""/>
+                    
+                    <h3> Apple Wach Verde</h3>
+                    
+                    <img class="estrela" src="img/iconeDescricao/estrela.png" alt=""/>
+                    
+                    <div class="preco">
+                        <div class="valorReal"> R$2.499,00</div> 
+                        <div class="valorDesconto">R$1.979,00</div> 
+                        
+                    </div>
+                     
+                    <div class="botao">
+                        <input type="submit" value="Compre Agora" name="Botao"/> </h2>
+                    </div>
+                </div>
+
+                <div class="ComprarProd">
+                    <img src="https://ae01.alicdn.com/kf/H412449312a71499f86da8905579c7e59T/Pulseira-para-rel-gio-feita-em-silicone-para-apple-watch-band-44mm-42mm-40mm-38mm-iwatch.jpg_640x640.jpg" alt=""/>
+                    
+                    <h3> Apple Wach Laranja</h3>
+                    
+                    <img class="estrela" src="img/iconeDescricao/estrela.png" alt=""/>
+                    
+                    <div class="preco">
+                        <div class="valorReal"> R$2.499,00</div> 
+                        <div class="valorDesconto">R$1.979,00</div> 
+                    </div>
+                     
+                    <div class="botao">
+                        <input type="submit" value="Compre Agora" name="Botao"/> </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer id="rodape">
+    <h3>Desenvolvido por Regis Souza. <br> Copyright © 2022 - Todos os direitos reservados.  </br></h3>  
+        
+    </footer>
+</body>
+</html>

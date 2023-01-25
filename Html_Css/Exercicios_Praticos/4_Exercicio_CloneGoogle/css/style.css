@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #202124; 
+}
+
+nav{display: flex;}
+.Menu{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: white;
+}
+
+.Textrigth ul{
+    display: flex;
+    list-style: none;  
+    align-items:center;
+    justify-content: center;
+}  
+
+.Textrigth ul li{
+    padding: 10px;
+    display: flex;
+     align-items:center;
+    justify-content: center;
+
+}
+
+.Textrigth ul li a{
+    text-decoration: none;
+    color: white;
+}
+ ul li a:hover{
+    text-decoration:underline;
+    color: white;
+}
+.iconeMenu img{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    padding: 8px;
+   
+}
+.iconeMenu:hover{
+    border-radius: 30px;
+}
+.iconePerfil img{   
+    display: flex; 
+    padding: 5px;
+    width: 40px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.iconePerfil:hover{
+    border-radius: 30px;
+}
+#Geral{
+    max-height: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.divLogo img{
+    max-width:300px;
+    object-fit: cover;
+}
+
+.img,input:hover, 
+.OrganizaEspacamento:hover {
+    border: 2px solid #303134;
+    background-color: #303134;
+}
+
+.OrganizaEspacamento{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 30px;
+    border: 2px solid #303134;
+    background-color: #202124;
+    border-radius: 30px;
+}
+
+
+.Lupa{
+    display: flex;
+    height: 45px;
+    border-radius: 30px;
+}
+.Lupa img{
+    flex:1;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    object-fit: contain;
+    height:auto;
+    margin: 0;
+}
+.Lupa .key{
+    flex:1;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+}
+.Lupa .Mic{
+    flex:1;
+    height: 50px;
+    margin-top:-3px ;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+}
+
+.OrganizaEspacamento input{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    width: 500px;
+    color: white;
+    border: 0;   
+    font-size: 23px;
+    background-color: transparent; /*pega cor da div*/
+}
+
+.OrganizaEspacamento input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+ }
+ .CorpoButton{
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+ }
+ .Pesquisa button{
+    flex: 1;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #303134;
+    padding: 20px;
+    background-color: #303134;
+    height: 40px;
+    color: white;
+}
+.Pesquisa button:hover{
+    padding: 20px;
+    border: 1px solid #9c9c9c;   
+}
+.RodapeCorpo{
+    display: flex;
+    background-color: #171717;
+    color: #9AA0A6;
+    border-bottom: 1px solid #303134;
+    padding: 14px;
+}
+
+.comportamentoDiv{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 14px;
+    color: #9AA0A6;
+    background-color: #171717;
+}
+.RodapeAjuda1{
+    flex: 1;
+    flex-basis: 60%; 
+}
+
+.RodapeAjuda3{
+    flex:1;
+    flex-basis: 40%; 
+}
+.RodapeAjuda1 ul{
+    display: flex;
+    list-style: none;  
+    margin-left: 20px;
+    align-items:center;
+    justify-content: flex-start;
+}
+.RodapeAjuda3 ul{
+    display: flex;
+    list-style: none;  
+    margin-right: 20px;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.RodapeAjuda1 ul li, .RodapeAjuda3 ul li{
+    display: flex;
+    align-items:center;
+    margin-left: 20px;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+    font-size: 15px;
+    margin-top: 10px;
+    flex-direction: column;
+    color: #4A93F8;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*Responsividade*/
+@media(max-width:680px){
+    .divLogo img{
+        max-width:250px;
+        object-fit: cover;
+    }
+
+    .OrganizaEspacamento input{
+        width: 100%;
+        color: white;
+        border: 0;   
+        font-size: 23px;
+        background-color: transparent; /*pega cor da div*/
+    }
+    .comportamentoDiv{
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
+@media(max-width:390px){
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .comportamentoDiv{
+        width: 100%;
+        font-size: 12px;
+        flex-direction: column;
+    }
+     .RodapeAjuda1{
+        flex: 1;
+      
+        display: flex;
+        margin-left: -50px;
+       
+   
+    }
+     .RodapeAjuda2{
+        flex: 1;
+        flex-basis: none;
+        display: flex;
+        margin-right: -50px;
+    
+    }
+
+}

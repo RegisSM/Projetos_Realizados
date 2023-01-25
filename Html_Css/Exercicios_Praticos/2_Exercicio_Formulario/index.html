@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Formulario.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="hidden" name="informacaoDeDados" value="MG"/>
+        <div class="container">
+            
+            <header>
+                <div class="Titulo"> <h1>Formulário de Cadastro</h1>
+                </div>
+            </header>  
+            <fieldset>
+                    <legend> Dados Pessoais </legend>
+                   
+                <div class="corpo desfaz">
+                    <div class="CorpoLeft">
+                        <label for=""> Nome Completo:</br>
+                            <input type="text" name="NomeUsuario" required  placeholder="Digite seu Nome" autofocus minlength="3"/>
+                        </label> 
+
+                        <label for=""> RG:</br>
+                            <input type="number" name="RG" required minlength="8" maxlength="8" placeholder="00.000.000-0" />
+                        </label> 
+
+
+                        <label for=""> Idade:</br>
+                            <input type="number" name="idade" required minlength="2"  placeholder="00" />
+                        </label> 
+                        <label for=""> Escolaridade: </br>
+                            <select name="order[]" required placeholder="Selecione uma Opção">
+                                <option selected>  </option>
+                                <option value="OptPrimeiro"> Ensino fundametal Incompleto</option>
+                                <option value="OptSegundo">Ensino Médio Incompleto</option>
+                                <option value="OptTerceiro"> Ensino fundametal Completo</option>
+                                <option value="OptUltimo">Ensino Médio Completo</option>
+                            </select>
+                        </label> 
+                        <label> Email: <br/>
+                            <input type="text" name="email"  pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)" placeholder="exemplo@gmail.com" title="Endereço de email"/>
+                        </label>
+                        <div class="desfaz">
+                            <div class="botao desfaz">
+                                <input type="submit" class="Enviar" value=" Cadastrar"/> </br>
+                            </div>
+                            <div class="botao desfaz">
+                                <input  type="submit" class="Limpar" value=" Limpar Cadastro"/> </br>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="CorpoRight">
+                        <label for=""> Data Nascimento:</br>
+                            <input type="datetime-local" required minlength="8" maxlength="8"/>
+                        </label> 
+                        
+                        <fieldset class="borda">
+                           
+                            <legend>Sexo:</legend> 
+                            <label class="Tabelinha" for="">
+                                Masculino <input type="radio" name="sexo"/>
+                                Feminino <input type="radio" name="sexo"/>
+                            </label>
+                        </fieldset>
+                      
+                        <label for=""> CPF:</br>
+                            <input type="number" name="RG" required minlength="11" maxlength="11" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="00.000.000-0" />
+                        </label> 
+                        
+                        <label for=""> Mãe:</br>
+                            <input type="text" name="mae" required  placeholder="Digite o nome da sua mãe" />
+                        </label> 
+                        <label> Profissão: <br/>
+                            <input type="text" name="profition"  required  minlength="3"/>
+                        </label>
+                        <div class="oculto">
+                            <div>
+                                <input type="submit" class="Enviar" value=" Cadastrar"/> </br>
+                            </div>
+                            <div>
+                                <input  type="submit" class="Limpar" value=" Limpar Cadastro"/> </br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+
+        
+    </form>
+</body>
+</html>

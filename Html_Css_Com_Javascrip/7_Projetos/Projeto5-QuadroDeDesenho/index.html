@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Desenho</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --cor0: black;
+            --cor1: blue;
+            --cor2: red;
+            --cor3: green;
+            --cor4: yellow;
+            --cor5:gray;
+            --cor6:white;
+        }
+        body{
+            display: flex;
+            max-width: 100%;
+            justify-content: center;
+            background-color: #333;
+        }
+        body .container{
+            display: flex;
+            max-width: 1100px;
+            max-height: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            margin-bottom: 50px;
+            color: var(--cor6);
+        }
+        #tela{
+            border: 2px solid #000;
+            background-color: #fff;
+            cursor: crosshair;
+            max-width:100%;
+        }
+        .colorArea{
+            display:flex;
+            width: 100vw;
+            max-width:1000px;
+            
+            
+        }
+        .color{
+            flex: 1;
+            height: 50px;
+            cursor: pointer;
+            border: 5px
+        }
+        .color.active{
+            border: 5px solid var(--cor6);
+        }
+        footer{        
+            margin-top: 50px;
+            color: var(--cor6);
+            font-size:15px;
+        }
+
+        .clear{
+            border: 1px solid var(--cor0);
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            color: var(--cor6);
+            cursor: pointer;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desenhando no Canvas</h1>
+        <canvas width="1000" height="600" id="tela"></canvas>
+        <div class="colorArea">
+            <div data-color="black" style="background-color: var(--cor0);" class="color active"></div>
+            <div data-color="blue" style="background-color: var(--cor1);" class="color "></div>
+            <div data-color="red" style="background-color: var(--cor2);" class="color "></div>
+            <div data-color="green" style="background-color: var(--cor3);" class="color "></div>
+            <div data-color="yellow" style="background-color: var(--cor4);" class="color "></div>
+            <div data-color="gray" style="background-color: var(--cor5);" class="color "></div>
+        </div>
+        <button class="clear">Limpar Quadro</button>
+        <footer>Criado por Regis Souza</footer>
+    </div>
+    <script src="script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bateria</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: contain;
+            height: 100vh;
+            flex-direction: column;
+          
+            background-image: url(image/bat.gif);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+        }
+        h1{
+            display: flex;
+            padding: 10px;
+        }
+        .keys{
+            display: grid;
+            font-size: 40px;
+            align-items: center;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;
+            width: 400px;
+            height: 400px;
+        }
+        .key{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            border: 2px solid #FFF;
+            font-weight: bold;
+            height: 80px;
+            background-color: rgba(117, 8, 8, 0.7);
+        }
+        .key.active{
+            border:2px solid #FF0;
+            color: rgb(38, 0, 255);
+        }
+        .compser{
+            width: 400px;
+            display: flex;
+            gap: 11px;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20px;
+           
+        }
+        .compser #input{
+            width: 100%;  border: 2px solid #FFF;
+            outline: none;
+            font-size: 20px;
+            background-color: rgb(14, 10, 10,0.4);
+            padding: 10px 20px
+        }
+        input::placeholder{ /*Funciona em todos os navegadores modernos*/
+            color: #FFF;
+            font-weight: bold;
+        }
+        input{color: white;}
+        .compser button{
+            margin-top: 10px;
+            opacity: 1;
+            border: 2px solid #FFF;
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: inherit;
+            color: #FFF;
+            cursor: pointer;
+        }
+        footer{
+            position: relative;
+            color: #FFF;
+            bottom:0;
+            top: 100px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            /* background-color: #26282B; */
+        }
+    </style>
+</head>
+<body>
+    <h1> Projeto: bateria musical </h1>
+
+    <div class="keys">
+        <div data-key="keyq" class="key">Q</div>
+        <div data-key="keyw" class="key">W</div>
+        <div data-key="keye" class="key">E</div>
+
+        <div data-key="keya" class="key">A</div>
+        <div data-key="keys" class="key">S</div>
+        <div data-key="keyd" class="key">D</div>
+
+        <div data-key="keyz" class="key">Z</div>
+        <div data-key="keyx" class="key">X</div>
+        <div data-key="keyc" class="key">C</div>
+    </div>
+
+    <div class="compser">
+        <input type="text" id="input" placeholder="Faça uma melodia..."/>
+        <button>Tocar</button>
+    </div>
+    <footer> Criado por Regis Souza</footer>
+    <audio id="s_keyq" src="sounds/keyq.wav"></audio>
+    <audio id="s_keyw" src="sounds/keyw.wav"></audio>
+    <audio id="s_keye" src="sounds/keye.wav"></audio>
+
+    <audio id="s_keya" src="sounds/keya.wav"></audio>
+    <audio id="s_keys" src="sounds/keys.wav"></audio>
+    <audio id="s_keyd" src="sounds/keyd.wav"></audio>
+
+    <audio id="s_keyz" src="sounds/keyz.wav"></audio>
+    <audio id="s_keyx" src="sounds/keyx.wav"></audio>
+    <audio id="s_keyc" src="sounds/keyc.wav"></audio>
+    <script>
+        // o comando abaixo ira monitorar o evento a seguir
+        //keyup=> quando preciona e solta a tecla
+        document.body.addEventListener("keyup", (e)=> {
+           // console.log(e.code.toLowerCase()); //informa qual a tecla precionada
+            playSound(e.code.toLowerCase()); //chama a função e deixa a tecla precionada em minúscula
+        });
+
+        document.querySelector('.compser button').addEventListener("click",(e)=>{
+            let som =  document.querySelector('#input').value; // pega o que foi digitado no input
+            console.log('O valor digitado foi ',som); //mostra
+            // comando abaixo ira verificar se o som foi inserido no input
+            if (som!==''){
+                let somArray= som.split(''); // cria um array 
+                console.log(somArray);
+                iniciarComposicao(somArray);
+
+            }
+            document.querySelector('#input').innerHTML.value='Porfavor, insira as letras da musíca!'
+        });
+
+        // área de funções:
+        function playSound(sound){
+            let IdentificaAudio= document.querySelector(`#s_${sound}`); //Comando dinamico onde seleciona a tag pelo id.
+            // e em seguida identifica o audio da tecla selecionada.
+          
+            let keyTecla= document.querySelector(`div[data-key= "${sound}"]`); //informa a div da tecla q foi precionada
+         //   console.log(IdentificaAudio, keyTecla);
+            if (IdentificaAudio){ // se foi encontrado
+                IdentificaAudio.currentTime=0; // começa o audio novamente;
+                IdentificaAudio.play(); //toca o som
+            }
+            if(keyTecla){// se ecotrar add uma classe nela div precionada
+                keyTecla.classList.add("active");
+                keyTecla.playSound=0;
+                setTimeout(()=>{
+                    keyTecla.classList.remove("active");
+                },300);
+            }
+        }
+        
+        function iniciarComposicao(arraySom){
+            let espera=0;  // wait=> espera
+            //o for abaixo ira dar um loop no array para percorrer todas as letras digitadas
+            for ( let somItem of arraySom){
+                setTimeout(()=>{
+                    playSound(`key${somItem}`);
+                },espera); 
+                espera+=290;
+            }
+
+        };
+    </script>
+</body>
+</html>

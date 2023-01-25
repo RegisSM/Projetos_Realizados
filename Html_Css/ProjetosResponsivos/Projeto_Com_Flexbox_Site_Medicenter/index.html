@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/CSS_Do_Projeto.css">
+    <script type="text/javascript">
+        window.onload=function(){
+            document.querySelector(".MenuMobile").addEventListener("click",function(){
+                if (document.querySelector("nav ul").style.display=='flex'){
+                    document.querySelector("nav ul").style.display='none';
+                } else{
+                    document.querySelector(".menu nav ul").style.display='flex';
+                }
+            });
+
+        };
+        window.addEventListener('resize', function () {
+            var largura = window.innerWidth;
+
+            if (largura > 600){
+                document.querySelector(".menu nav ul").removeAttribute('style');
+            };
+        });
+    </script>
+    <title>MediCenter</title>
+</head>
+<body>
+    <header>
+            <div class="container">
+            
+                <div class="Logo">
+                   <a href=""> 
+                       <img class="fotoLogo" src="images/logo.png" alt=""/>
+                   </a>
+                </div>
+                
+                <div class="menu">
+                    <nav>
+                        <div class="MenuMobile">
+                            <div class="LinhaMobile"></div>
+                            <div class="LinhaMobile"></div>
+                            <div class="LinhaMobile"></div>
+                        </div>
+                        <ul>
+                            <li class="active"> <a href="">HOME</a> </li>
+                            <li><a href="">BLOG</a></li>
+                            <li><a href="">PÁGINAS</a></li>
+                            <li><a href="">DEPARTAMENTOS</a></li>
+                            <li><a href="">CALENDÁRIO</a></li>
+                            <li><a href="">GALERIA</a></li>
+                            <li><a href="">CONTATO</a></li>
+                        </ul>
+                    </nav>
+                </div>      
+            </div>
+    </header>
+    <section id="banner">
+        <div class="container DeixarDivEmcoluna">
+              
+              <div class="banner_RedLine">
+                <h1>Experiência de alto nível</h1>
+                <h2>Medicenter  é um modelo responsivo perfeito para todos os tamanhos de tela</h2>
+              </div>
+              
+              <div class="Banner_option">
+                <div class="banner1">
+                    <div class="Banner_Titulo">Caso de emergência</div>
+                    <div class="Banner_descricao"> O primeiro a se fazer nesses casos é ligar para o Corpo de Bombeiros ou para o SAMU. Para facilitar o atendimento, tenha em mente algumas informações básicas que você deve fornecer.</div>
+                    <a href=""> Saiba mais</a>
+                </div>
+                <div class="banner2">
+                    <div class="Banner_Titulo">Horário dos médicos</div>
+                    <div class="Banner_descricao"> O paciente tem a possibilidade de marcar a sua consulta no horário que ele desejar. Desta forma, não existe a necessidade de que esse agendamento seja feito apenas em horário comercial.</div>
+                    <a href=""> Saiba mais</a>
+                </div>
+                <div class="banner3">
+                    <div class="Banner_Titulo">Horário de funcionamento</div>
+                    <div class="Banner_descricao"> 
+                    
+                        <div class="dia">
+                        <p>Segunda-feira a Sexta-feira:</p> <p> 8.00 - 17.00 </p> 
+                        </div>
+                
+                        <div class="dia">
+                            <p> Sábado:  </p>   <p> 9.30 - 17.30</p> 
+                        </div>
+                        
+                        <div class="dia">
+                            <p> Domingo:  </p>  <p>  9.30 - 15.00</p> 
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="geral">
+            <div class="container">
+                <section>
+                    <div class="widget">
+                        <div class="widget_Titulo">
+                            <div class="widget_Titulo_Texto">    Últimas notícias
+                            <div class="widget_Div_Barra"></div>
+                        </div>
+                        
+                        <div class="widget_Corpo flex">
+                            <article>
+                                    <div class="Corpo_balao">
+                                        <div class="Corpo_data"> 12 DEC 12</div>
+                                        <div class="Corpo_Num"> 2 </div>
+                                    </div>
+                                    <a href="">
+                                        <div class="thumbnail">
+                                            <img src="images/foto.png" alt=""/>
+                                        </div>
+                                        <h1>Lorem Ipsum dolor sit amat velum</h1>
+                                        <div class="news_resumo">
+                                            O Lorem Ipsum é um texto modelo
+                                            da indústria tipográfica e de
+                                            impressão. O Lorem Ipsum tem
+                                            vindo a ser o texto padrão 
+                                            usado por estas indústrias 
+                                            de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. 
+                                        </div>
+                                    </a>
+                            </article>  
+
+                            <article>
+                                <div class="Corpo_balao">
+                                    <div class="Corpo_data"> 12 DEC 12</div>
+                                    <div class="Corpo_Num"> 2 </div>
+                                </div>
+                                <a href="">
+                                    <div class="thumbnail">
+                                        <img src="images/foto.png" alt=""/>
+                                    </div>
+                                    <h1>Lorem Ipsum dolor sit amat velum</h1>
+                                    <div class="news_resumo">
+                                        O Lorem Ipsum é um texto modelo
+                                        da indústria tipográfica e de
+                                        impressão. O Lorem Ipsum tem
+                                        vindo a ser o texto padrão 
+                                        usado por estas indústrias 
+                                        de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. 
+                                    </div>
+                                </a>
+                            </article>  
+                            <article>
+                                <div class="Corpo_balao">
+                                    <div class="Corpo_data"> 12 DEC 12</div>
+                                    <div class="Corpo_Num"> 2 </div>
+                                </div>
+                                <a href="">
+                                    <div class="thumbnail">
+                                        <img src="images/foto.png" alt=""/>
+                                    </div>
+                                    <h1>Lorem Ipsum dolor sit amat velum</h1>
+                                    <div class="news_resumo">
+                                        O Lorem Ipsum é um texto modelo
+                                        da indústria tipográfica e de
+                                        impressão. O Lorem Ipsum tem
+                                        vindo a ser o texto padrão 
+                                        usado por estas indústrias 
+                                        de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. 
+                                    </div>
+                                </a>
+                            </article>  
+
+                            <article>
+                                <div class="Corpo_balao">
+                                    <div class="Corpo_data"> 12 DEC 12</div>
+                                    <div class="Corpo_Num"> 2 </div>
+                                </div>
+                                <a href="">
+                                    <div class="thumbnail">
+                                        <img src="images/foto.png" alt=""/>
+                                    </div>
+                                    <h1>Lorem Ipsum dolor sit amat velum</h1>
+                                    <div class="news_resumo">
+                                        O Lorem Ipsum é um texto modelo
+                                        da indústria tipográfica e de
+                                        impressão. O Lorem Ipsum tem
+                                        vindo a ser o texto padrão 
+                                        usado por estas indústrias 
+                                        de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. 
+                                    </div>
+                                </a>
+                            </article>  
+                        </div>
+                    </div>
+                </section>
+                
+                <aside>
+                    <div class="widget">
+                        <div class="widget_Titulo">
+                            <div class="widget_Titulo_Texto"> Departamento</div>
+                            <div class="widget_Div_Barra"></div>
+                        </div>
+                        <div class="widget_Corpo">
+                            <div class="quadrado">Odontologia</div>
+                            <div class="quadrado">Clinica </div>
+                            <div class="quadrado">Pediatra</div>
+                            <div class="quadrado">Ortonpedia</div>
+                            <div class="quadrado">Cardiologia</div>
+                            <div class="quadrado">Neuro</div>
+                        </div>
+                    </div>
+
+                    <section>
+                        <div class="widget">
+                                <div class="widget_Titulo">
+                                    <div class="widget_Titulo_Texto"> Marque uma Consulta</div>
+                                    <div class="widget_Div_Barra"></div>
+                                    <div class="widget_Corpo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                                </div>
+                                <div class="widget_Contato">
+                                    <img class="AjeitarImagem" src="../Projeto_Com_Flexbox/images/icones/phone1.png" alt=""/> 
+                                    <div class="AjeitarTexto">Telefone de Contanto: 11-77-8888</div>
+                                </div>
+                                </br>
+                                <div class="widget_Contato">
+                                    <img class="AjeitarImagem" src="../Projeto_Com_Flexbox/images/icones/form1.png" alt=""/>   
+                                    <div class="AjeitarTexto formulario"> Ou, preencha nosso 
+                                         <a href="https://workspace.google.com/business/signup/welcome?hl=pt-BR&source=gafb-forms-canvas-pt-BR&ga_region=latam&ga_country=pt-BR&ga_lang=pt-BR&__utma=61317162.539403549.1647183920.1647183920.1647183920.1&__utmb=61317162.0.10.1647183922259&__utmc=61317162&__utmx=-&__utmz=61317162.1647183920.1.1.utmcsr%3Dgoogle%7Cutmgclid%3DEAIaIQobChMIt7ajpK7D9gIVsebjBx1dzAYMEAAYASAAEgI9v_D_BwE%7Cutmgclsrc%3Daw.ds%7Cutmccn%3Dlatam-BR-all-pt-dr-bkws-all-all-trial-e-dr-1011272-LUAC0011908%7Cutmcmd%3Dcpc%7Cutmctr%3DKW_google+forms-ST_google+forms%7Cutmcct%3Dtext-ad-none-any-DEV_c-CRE_477535133211-ADGP_Hybrid+%7C+BKWS+-+MIX+%7C+Txt+~+Forms-KWID_43700057676889044-kwd-10647024857&__utmv=-&__utmk=152187262">
+                                          formulário de contato </a> para tirar sua dúvida. 
+                                    </div>
+                                </div>
+                                </br>
+                                <div class="widget_Contato">
+                                    <img class="AjeitarImagem" src="../Projeto_Com_Flexbox/images/icones/mail1.png" alt=""/>  
+                                    <div class="AjeitarTexto">Email de Contanto: mediecenter@gmail.com</div>
+                                </div>
+                                </br>
+                        </div>
+                    </section>
+
+                </aside>
+                
+            </div>
+    </section>
+
+  
+
+    <footer>
+        <div class="container flex_Para_Coluna_Abaixo_Area">
+            <div class="footer_menu">
+               <a href="">
+                    <div class="Fm_1"> 
+                        <h1>Plano de saúde</h1> 
+                        Aqui no medicenter temos atendimento individual ➔
+                    </div>
+                </a>
+                <a href="">
+                    <div class="Fm_2">
+                        <h1>Registros médicos</h1> 
+                        Aqui no medicenter temos atendimento individual ➔ </div>
+                </a>
+                <a href="">
+                    <div class="Fm_3"> 
+                        <h1>Pagamento de contas on-line</h1> 
+                        Aqui no medicenter temos atendimento individual ➔ </div>
+                </a>
+            </div>
+            
+            <div class="footer_Area">
+                <div class="footer_AreaItem1">
+                    
+                    <div class="widget_Titulo">
+                        <div class="widget_Titulo_Texto"> Mediacenter Clínica</div>
+                        <div class="widget_Div_Barra"></div>
+                    </div>
+                    <div class="widget_Corpo">
+                        <div class="Texto">Traz funcionalidades que facilitam a mobilidade dos
+                            usuários e atendem as suas necessidades como pacientes. </br>
+                            
+                        </div>
+                        Endereço da Clinica Medicenter 
+                        <div class="Widget_Endereco">
+                            <div class="Rua">
+                                33 Fariane Street
+                                <br> keiltr East</br> 
+                                Vic 3033, Australia.
+                            </div>
+                            <div class="celular_email">
+                                +123 655 655
+                              <br>  +123 755 755 </br>
+                               <a href=""> medicenter@mail.com </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Texto TamanhoIconeRodape">
+                        <div class="TamanhoIconeRodape">
+                            <a href="">  <img src="images/IconesRodape/facebook-logo.png"  style="color: aliceblue;" alt=""/>                        
+                        </div>
+                        <div class="TamanhoIconeRodape">
+                            <a href="">   <img src="images/IconesRodape/email.png" alt=""/>                        
+                        </div>
+                        <div class="TamanhoIconeRodape">
+                          <a href="">  <img src="images/IconesRodape/twitter-sign.png" alt=""/>                        
+                          </a>
+                        </div>
+                        <div class="TamanhoIconeRodape">
+                            <a href="">  <img src="images/IconesRodape/youtube.png" alt=""/>                        
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!----------Segunda Coluna Do Rodape-------------->
+                <div class="footer_AreaItem2">
+                    <div class="widget_Titulo">
+                        <div class="widget_Titulo_Texto"> Últimos Post's</div>
+                        <div class="widget_Div_Barra"></div>
+                    </div>
+                    <div class="widget_Corpo flex_2ColunaRodape">
+                        <div class="deixa_Seta_Texto_Horizontal">
+                            <div class="seta">➝</div> 
+                            <div class="Texto Texto2"> 
+                               
+                                Ministério da Saúde anunciou a redução
+                                do intervalo de aplicação da terceira dose da vacina contra Covid-19 de cinco para quatro meses.
+                                <div class="AnoPostagem"> 1 dia atrás</div>
+                            </div>
+                        </div>
+                        <div class="deixa_Seta_Texto_Horizontal">
+                            <div class="seta">➝</div> 
+                            <div class="Texto Texto2"> 
+                               
+                                Ministério da Saúde anunciou a redução
+                                do intervalo de aplicação da terceira dose da vacina contra Covid-19 de cinco para quatro meses.
+                                <div class="AnoPostagem"> 1 dia atrás</div>
+                            </div>
+                        </div>
+                        <div class="deixa_Seta_Texto_Horizontal">
+                            <div class="seta">➝</div> 
+                            <div class="Texto Texto2"> 
+                             
+                                Ministério da Saúde anunciou a redução
+                                do intervalo de aplicação da terceira dose da vacina contra Covid-19 de cinco para quatro meses.
+                                <div class="AnoPostagem"> 1 dia atrás</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----------Terceira Coluna Do Rodape-------------->
+                <div class="footer_AreaItem3">
+                    <div class="widget_Titulo">
+                        <div class="widget_Titulo_Texto"> Últimos Tweet's</div>
+                        <div class="widget_Div_Barra"></div>
+                    </div>
+                    <div class="widget_Corpo">
+                        <div class="deixa_Seta_Texto_Horizontal">
+                            <div class="seta">➝</div> 
+                            <div class="Texto Texto2"> 
+                            
+                                Em nota técnica publicada nesta segunda-feira, 20, o 
+                                Ministério da Saúde anunciou a quarta dose da vacina 
+                                contra Covid-19 para pessoas imunossuprimidas. 
+                                <br>Saiba mais em : <a href="https://g1.globo.com/saude/noticia/2021/12/20/governo-reduz-intervalo-para-reforco-vacinal-e-anuncia-quarta-dose-para-imunossuprimidos.ghtml"> https://g1.globo.com </a>
+                                </br> <div class="AnoPostagem"> 1 dia atrás</div>
+                            </div>
+                        </div>
+                        <div class="deixa_Seta_Texto_Horizontal">
+                            <div class="seta">➝</div> 
+                            <div class="Texto Texto2"> 
+                            
+                                Em nota técnica publicada nesta segunda-feira, 20, o 
+                                Ministério da Saúde anunciou a quarta dose da vacina 
+                                contra Covid-19 para pessoas imunossuprimidas. 
+                                <br>Saiba mais em : <a href="https://g1.globo.com/saude/noticia/2021/12/20/governo-reduz-intervalo-para-reforco-vacinal-e-anuncia-quarta-dose-para-imunossuprimidos.ghtml"> https://g1.globo.com </a>
+                                </br> <div class="AnoPostagem"> 2 dia atrás</div>
+                            </div>
+                        </div>
+
+                        <div class="deixa_Seta_Texto_Horizontal">
+                            <div class="seta">➝</div> 
+                            <div class="Texto Texto2"> 
+                            
+                                Em nota técnica publicada nesta segunda-feira, 20, o 
+                                Ministério da Saúde anunciou a quarta dose da vacina 
+                                contra Covid-19 para pessoas imunossuprimidas. 
+                                <br>Saiba mais em : <a href="https://g1.globo.com/saude/noticia/2021/12/20/governo-reduz-intervalo-para-reforco-vacinal-e-anuncia-quarta-dose-para-imunossuprimidos.ghtml"> https://g1.globo.com </a>
+                                </br> <div class="AnoPostagem"> 2 dia atrás</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="Footer_CopyRight">
+                Copyright © 2022 - Todos os direitos reservados.
+            </div>
+        </div>
+        
+    </footer>
+
+</body>
+</html>

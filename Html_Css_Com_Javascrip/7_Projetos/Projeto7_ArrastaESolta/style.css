@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+h1{
+    color: white;
+   
+    text-align: center;
+}
+h2{color: white;text-align: center;  margin: 40px 0;}
+.neutralArea{
+    width: 550px;
+    height:150px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    border:  2px solid #fff;   
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab; /* cursor de puxar item */
+}
+.item.dragging{
+    opacity: 0.5; /* usado para dar opacidade a div clicada */
+} 
+.areas{
+    width: 550px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.areas.correct .area{ /* caso o usuario ganhe sera ativado este estilo */
+    border: 2px solid #00ff00;
+}
+.area{
+    height: 150px;
+    width:  250px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hover{
+    background-color: rgba(0,0,0,0.3);
+}
+footer{
+    margin-top: 40px;
+    color: #fff;
+    font-size: 15px;
+}
